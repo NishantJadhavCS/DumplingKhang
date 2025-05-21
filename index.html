@@ -6,27 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hero Page</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="res-styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
 
     <nav class="navbar">
-        <div class="nav-left">
+        <!-- Hamburger Icon (mobile only) -->
+        <div class="hamburger" id="hamburger">&#9776;</div>
+
+        <!-- Nav Links (visible on desktop, toggled on mobile) -->
+        <div class="nav-left desktop-nav">
             <a href="#">Home</a>
             <a href="#">About</a>
-            <a href="#">About</a>
+            <a href="#">Menu</a>
         </div>
 
+        <!-- Logo Centered -->
         <div class="nav-center logo">
-            MySite
+            <img src="assets/logo.png" alt="Dumpling Khang Logo">
         </div>
 
+        <!-- Contact Us -->
         <div class="nav-right">
-            <a href="#" class="contact-btn">Contact Us</a>
+            <a href="https://wa.me/918928755993" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+                <i class="fa-brands fa-whatsapp" style="color: #8f0000;"></i>
+            </a>
+        </div>
+
+        <!-- Mobile Dropdown Nav -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
         </div>
     </nav>
+
 
     <section class="hero">
         <div class="hero-content">
@@ -37,23 +54,35 @@
         </div>
     </section>
 
-    <section class="about-us">
-        <div class="about-container">
-            <h2>OUR STORY – HUMBLE ROOTS, BOLD JOURNEY</h2>
+    <section class="about-us" id="about">
+        <!-- Centered Section Heading -->
+        <h2 class="about-heading">OUR STORY – HUMBLE ROOTS, BOLD JOURNEY</h2>
 
-            <p>
-                What started in 2014 as a cozy food stall with a handful of momo recipes has today evolved into one of
-                Mumbai’s most loved Himalayan kitchens.
-            </p>
+        <div class="about-flex">
+            <!-- Text Column -->
+            <div class="about-text">
+                <p>
+                    Dumpling Khang is a soulful Himalayan fusion restaurant founded by Mrs. Shreejana Rai, a passionate
+                    chef from the Indo-Bhutan border who turned tradition into a culinary mission.
+                </p>
+                <p>
+                    What started in 2014 as a small momo stall in Vakola, Santacruz East, quickly won hearts with
+                    authentic flavors and heartfelt service.
+                </p>
+                <p>
+                    Today, Dumpling Khang is one of Mumbai’s favorite spots for Himalayan cuisine, celebrating the
+                    vibrant tastes of Nepal, Bhutan, and the Eastern Himalayas.
+                </p>
 
-            <p>
-                Dumpling Khang is a soulful Himalayan fusion restaurant founded by Mrs. Shreejana Rai, a passionate chef
-                from the Indo-Bhutan border town. What began as a small momo stall in Vakola, Santacruz East, in March
-                2014, has grown into a beloved Mumbai eatery serving flavors from Nepal, Bhutan, and the Eastern
-                Himalayas.
-            </p>
+            </div>
+
+            <!-- Image Column -->
+            <div class="about-image">
+                <img src="assets/about-us.jpg" alt="Founder Shreejana Rai" />
+            </div>
         </div>
     </section>
+
 
     <section class="founders">
         <h2>FOUNDERS BEHIND THE FLAVOR</h2>
@@ -107,6 +136,52 @@
 
         <p class="event-summary">
             Every event is custom-tailored — menu, packaging, portioning — all handled end-to-end with professionalism.
+        </p>
+    </section>
+
+    <section class="trusted">
+        <h2 class="trusted-heading">Trusted By</h2>
+
+        <div class="trusted-mentions">
+            <a href="https://curlytales.com/sreejana-rais-inspirational-story-behind-dumpling-khang-in-mumbai/"
+                class="mention-card" target="_blank" rel="noopener">
+                <div class="mention-logo">
+                    <img src="assets/curlytales-logo.png" alt="Curly Tales Logo">
+                </div>
+                <div class="mention-name">Curly Tales</div>
+                <div class="mention-quote">“Sreejana Rai’s Inspirational Story Behind Dumpling Khang In Mumbai.”</div>
+            </a>
+
+            <a href="https://www.mid-day.com/mumbai-guide/mumbai-food/article/Sample-the-best-of-home-made-food-Mumbai-has-to-offer-17257161"
+                class="mention-card" target="_blank" rel="noopener">
+                <div class="mention-logo">
+                    <img src="assets/midday-logo.png" alt="Mid-Day Logo">
+                </div>
+                <div class="mention-name">Mid-Day</div>
+                <div class="mention-quote">“Flavours from the Hills: Mumbai’s Nepali Food Secret”</div>
+            </a>
+
+            <a href="https://lbb.in/mumbai/momos-in-mumbai/" class="mention-card" target="_blank" rel="noopener">
+                <div class="mention-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1055.62 315">
+                        <path
+                            d="M377.46 272.7H508.4a8 8 0 0 1 8 8v25.8a8 8 0 0 1-8 8H325.07a8 8 0 0 1-8-8V8.5a8 8 0 0 1 8-8h36.3a8 8 0 0 1 8 8v256.15a8 8 0 0 0 8.09 8.05zM543.2 306.5V8.5a8 8 0 0 1 8-8H646q52 0 81.28 21.47t29.32 64.18a63.1 63.1 0 0 1-11.75 37.32q-11.72 16.53-32.63 25.19 30.18 5 46.46 26.1T775 224.38q0 44.23-28.89 67.2t-79.77 23h-115.1a8 8 0 0 1-8.04-8.08zm52.39-181.86a8 8 0 0 0 8 8h48q24.36 0 38.48-11.54t14.12-32.68q0-23.3-14.88-34.62T646 42.52h-42.4a8 8 0 0 0-8 8zm0 55.14v84.86a8 8 0 0 0 8 8h62.71q27.16 0 41.83-12.4t14.66-35.92q0-23.73-14.44-37.75t-40.53-14.88h-64.19a8 8 0 0 0-8.04 8.1zM805 306.5V8.5a8 8 0 0 1 8-8h94.79q52 0 81.28 21.47t29.32 64.18a63.1 63.1 0 0 1-11.75 37.32Q994.95 140 974 148.66q30.18 5 46.46 26.1t16.28 49.62q0 44.23-28.89 67.2t-79.77 23H813.06a8 8 0 0 1-8.06-8.08zm52.4-181.86a8 8 0 0 0 8 8h48q24.36 0 38.48-11.54T966 88.42q0-23.3-14.88-34.62t-43.27-11.28h-42.4a8 8 0 0 0-8 8zm0 55.14v84.86a8 8 0 0 0 8 8h62.67q27.16 0 41.83-12.4t14.66-35.92q0-23.73-14.44-37.75t-40.53-14.88h-64.14a8 8 0 0 0-8.05 8.1zM64.63 185.32s10.53 10 23 0l160-128.2V22.9A22.45 22.45 0 0 0 225.2.45h-183A22.52 22.52 0 0 0 19.78 22.9v120.18z"
+                            fill="#121213"></path>
+                        <path
+                            d="M91.29 219.9s-14.71 13.33-28.59 0l-43.1-34.8v113.1c0 6.28 4 11.58 9.56 14.47a16.54 16.54 0 0 0 17.09-1.08l81.84-56.47a10 10 0 0 1 11.36 0l81.87 56.47a16.74 16.74 0 0 0 9.49 3 17.17 17.17 0 0 0 7.91-1.92A16.74 16.74 0 0 0 248 298V97z"
+                            fill="#121213"></path>
+                    </svg>
+                </div>
+                <div class="mention-name">LLB (Little Black Book)</div>
+                <div class="mention-quote">“Hear, Hear: This Hidden Gem In Santacruz Serves Momo Burgers &
+                    Chocolate-Filled Momos.”</div>
+            </a>
+        </div>
+
+
+        <p class="trusted-quote">“You know a place is legit when half the city's food bloggers keep going back.”</p>
+        <p class="trusted-others">and many more mentions by <strong>@mumbaifoodcrush</strong>,
+            <strong>@gullybites</strong> & <strong>@bombayeats</strong>
         </p>
     </section>
 
