@@ -177,3 +177,28 @@
         font-size: 0.95rem;
     }
 }
+
+@media (max-width: 768px) {
+    .trusted-items {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .trusted-item {
+        flex: 0 0 50%;
+        scroll-snap-align: start;
+    }
+
+    .carousel-arrow {
+        display: block;
+    }
+
+    .trusted-item img {
+        max-width: 60px;
+    }
+
+    .trusted-text {
+        font-size: 0.85rem;
+    }
+}
