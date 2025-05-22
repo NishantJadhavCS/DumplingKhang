@@ -6,6 +6,7 @@
 
 body,
 html {
+  overflow-x: hidden;
   height: 100%;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -113,9 +114,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 0 2rem;
   position: relative;
+  text-align: left;
 }
 
 .hero::before {
@@ -128,8 +129,21 @@ html {
   z-index: -1;
 }
 
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  position: relative;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 2000px;
+}
+
 .hero-content {
   padding-top: 20px;
+  padding: 0 12rem;
+  flex: 1;
 }
 
 .tagline-small {
@@ -153,12 +167,40 @@ html {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-
 .hero p {
   font-size: 2rem;
   max-width: 900px;
-  margin: 0 auto;
   color: #ffd700;
+}
+
+.order-btn {
+  background: #ffd700;
+  color: #6e0101;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+  background: #ffcc00;
+}
+
+.hero-image {
+  flex: 0 0 25%;
+  max-width: 500px;
+}
+
+.hero-image img {
+  width: 950px;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  transform: translateY(54px);
 }
 
 
@@ -431,7 +473,7 @@ html {
 }
 
 .trusted-for {
-  background-color: #ffeba8;
+  background-color: #fddc4a;
   padding: 1rem 2rem;
   font-family: 'Poppins', sans-serif;
   text-align: center;
@@ -484,4 +526,63 @@ html {
 
 .carousel-arrow:focus {
   outline: 2px solid #b28800;
+}
+
+
+
+.core-values {
+  background: #fff9f5;
+  /* soft warm background */
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #a33b1e;
+  /* muted maroon/golden */
+  margin-bottom: 3rem;
+}
+
+.values-grid {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.value-card {
+  max-width: 300px;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(163, 59, 30, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(163, 59, 30, 0.2);
+}
+
+.value-card img {
+  width: 80px;
+}
+
+.value-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #6e0101;
+}
+
+.value-card p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #5a3320;
+  font-size: 1rem;
+  line-height: 1.5;
 }

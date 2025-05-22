@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="res-styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
+
+    <script>
+        AOS.init();
+    </script>
 
     <nav class="navbar">
         <!-- Hamburger Icon (mobile only) -->
@@ -46,13 +53,20 @@
 
 
     <section class="hero">
-        <div class="hero-content">
-            <p class="tagline-small">Welcome to Dumpling Khang</p>
-            <h1>Delicacies from the Himalayas</h1>
-            <p>“In the Himalayas, we say food is not just eaten — it’s offered, shared, and celebrated.”</p>
-            <button class="order-btn">Order Now</button>
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1200">
+                <p class="tagline-small">Welcome to Dumpling Khang</p>
+                <h1>Delicacies from the Himalayas</h1>
+                <p>“In the Himalayas, we say food is not just eaten — it’s offered, shared, and celebrated.”</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1200">
+                <img src="assets/dumplings.png" alt="Himalayan Dish">
+            </div>
         </div>
     </section>
+
 
     <section class="about-us" id="about">
         <!-- Centered Section Heading -->
@@ -210,7 +224,35 @@
         </p>
     </section>
 
+    <section class="core-values">
+        <div class="core-container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <img src="assets/authentic-food.gif" alt="Authentic Food" />
+                    <h3>Authentic Food</h3>
+                    <p>We honor tradition by serving genuine Himalayan flavors crafted with care.</p>
+                </div>
+                <div class="value-card">
+                    <img src="assets/home-style.gif" alt="Home Style" style="transform: translateY(-12px);">
+                    <h3>Home Style</h3>
+                    <p>Every dish reflects the warmth and love of a home-cooked meal.</p>
+                </div>
+                <div class="value-card">
+                    <img src="assets/community.gif" alt="Community" />
+                    <h3>Community</h3>
+                    <p>We believe in building connections through shared meals and culture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
